@@ -31,8 +31,8 @@ const listTasks = () => {
 const removeTask = (position) => {
   const tasks = loadTasks();
   index = position - 1;
-  console.log("Task Deleted = ", tasks[index].task);
-  tasks.splice(index, 1);
+  const task = tasks.splice(index, 1);
+  console.log("Task Deleted = ", task[0].task);
   saveTasks(tasks);
 };
 
