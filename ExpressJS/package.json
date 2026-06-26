@@ -1,0 +1,16 @@
+{
+  "name": "expressjs",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Rahul",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "restapi": "nodemon restapi.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
