@@ -1,0 +1,16 @@
+{
+  "name": "frontend-backend-connection",
+  "version": "1.0.0",
+  "description": "connection frontend to backend",
+  "license": "ISC",
+  "author": "Rahul Lingwal",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
