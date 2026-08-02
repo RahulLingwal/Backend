@@ -1,0 +1,23 @@
+{
+  "name": "mvc",
+  "version": "1.0.0",
+  "description": "The Model-View-Controller (MVC) is a software design pattern that separates an application into three independent components: Model View and Controller",
+  "keywords": [
+    "express",
+    "nodejs",
+    "javascript",
+    "mongodb"
+  ],
+  "license": "ISC",
+  "author": "Rahul Lingwal",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.9.1",
+    "nodemon": "^3.1.14"
+  }
+}
