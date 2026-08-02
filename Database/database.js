@@ -41,7 +41,7 @@ const User = mongoose.model("User", userSchema);
 //   username: "Rahul Lingwal",
 //   email: "rahul@gmail.com",
 //   city: "Dehradun",
-//   state: "Uttarakhan",
+//   state: "Uttarakhand",
 // });
 
 const port = 5000;
@@ -68,9 +68,25 @@ app.post("/api/users", async (req, res) => {
 
 app.get("/api/users", async (req, res) => {
   const allUsers = await User.find({});
-  console.log(allUsers);
   return res.json(allUsers);
 });
+
+app
+  .route("/api/user/:id")
+  .get(async (req, res) => {
+    const user = await User.findById(req.params.id);
+
+    if (!user) return res.status(404).json({ msg: "user not found." });
+    return res.json(user);
+  })
+  .patch(async (req, res) => {
+    await User.findByIdAndUpdate(req.params.id, { city: "Rishikesh" });
+    return res.json({ status: "success" });
+  })
+  .delete(async (req, res) => {
+    await User.findByIdAndDelete(req.params.id);
+    return res.json({ status: "success" });
+  });
 
 app.listen(port, () => {
   console.log(`Server started at http://localhost:${port}`);
